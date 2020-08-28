@@ -1,0 +1,31 @@
+{
+  "name": "rollup-bug",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf dist && rollup --config rollup.config.js",
+    "watch": "rollup --config rollup.config.js --watch",
+    "prettier": "prettier --write .",
+    "lint": "prettier --check ."
+  },
+  "hooks": {
+    "pre-commit": "npm run prettier"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjenkinson/rollup-export-bug.git"
+  },
+  "author": "Tom Jenkinson <tom@tjenkinson.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tjenkinson/rollup-export-bug/issues"
+  },
+  "homepage": "https://github.com/tjenkinson/rollup-export-bug#readme",
+  "devDependencies": {
+    "@actions/core": "^1.2.5",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5",
+    "rollup": "^2.7.2"
+  }
+}
